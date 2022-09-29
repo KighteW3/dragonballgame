@@ -1,3 +1,4 @@
+function gameStart(){
 let numeroParticipantesS = prompt("Escriba el número de los participantes");
 
 let numeroParticipantes = parseInt(numeroParticipantesS);
@@ -76,6 +77,8 @@ for (i=0; i<numeroParticipantes; i++) {
     personajesTotal.push(personaje)
 }
 
+console.log(personajesTotal.length);
+
 function definirTransformaciones(personaje){
     seTransforma = getRandomNumber(0,1);
     let raza = personaje.race[1];
@@ -140,10 +143,44 @@ function personajesCompletados() {
 
 personajesCompletados();
 
-batallaFinal();
+let personajesFullPower = [];
+
+for (i=0; i<personajesTotal.length; i++) {
+    personajesFullPower.push(personajesTotal[i].bPower);
+}
+
+let personajeGanadorResultado;
+
+function finalBattle() {
+    for (i=0; i<personajesTotal.length; i++) {
+        personajesFullPower.sort(function(a,b){return a-b});
+        personajesFullPower.reverse();
+        personajeGanadorResultado = personajesFullPower[0];
+    }
+}
+
+finalBattle();
+
+let personajeGanador;
+
+for (i=0; i<personajesTotal.length; i++) {
+    if (personajeGanadorResultado === personajesTotal[i].bPower) {
+        personajeGanador = personajesTotal[i];
+        break;
+    }
+}
+
+alert(`El ganador del encuentro es ${personajeGanador.name} con un poder de ${personajeGanador.bPower}`);
 
 function getRandomNumber(min, max) {
     let randomize = Math.random() * (max - min) + min;
     return Math.round(randomize);
 }
+}
 
+const startButton = document.getElementById('start-button');
+
+startButton.addEventListener('click', (e)=>{
+    e.preventDefault;
+    gameStart();
+})

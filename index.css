@@ -1,0 +1,30 @@
+
+
+#viewport {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #222;
+}
+
+h1 {
+    color: #babad1;
+}
+
+button {
+    width: 80%;
+    height: 60%;
+    background: #2525b5;
+    color: #babad1;
+    font-size:xx-large;
+    border: none;
+    outline: none;
+    border-radius: 13px;
+}
+
+button:hover {
+    cursor: pointer;
+}
