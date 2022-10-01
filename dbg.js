@@ -121,6 +121,10 @@ function definirTransformaciones(personaje){
                 transformaciónResultante = buuPuro;
                 return transformaciónResultante;
             }
+            if (porcentaje === 4){
+                transformaciónResultante = superBuu;
+                return transformaciónResultante;
+            }
         }
     } else {
         return 0;
