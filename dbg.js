@@ -72,6 +72,8 @@ let freezerFormaFinal = new Transformaciones("FormaFinal", "Freezer", 40);
 let freezerFormaFinalFullpower = new Transformaciones("FormaFinalFullpower", "Freezer", 45);
 let goldenFreezer = new Transformaciones("GoldenFreezer", "Freezer", superSaiyanBlue.multiplicador + (superSaiyanBlue.multiplicador / 2))
 let kaioKen = new Transformaciones("Kaio-Ken", "Humano", 10);
+let androideSemiPerfecto = new Transformaciones("Androide Semi-Perfecto", "Androide", 35);
+let androidePerfecto = new Transformaciones("Androide Perfecto", "Androide", 80);
 let superBuu = new Transformaciones("Super-Buu", "Majin", 500);
 let buuPuro = new Transformaciones("Buu-Puro", "Majin", 400);
 
@@ -134,6 +136,14 @@ function definirTransformaciones(personaje){
             transformaciónResultante = kaioKen;
             return transformaciónResultante
         } else if (raza === 4){
+            porcentaje = getRandomNumber(1,4);
+            if (porcentaje === 1 || porcentaje === 2 || porcentaje === 3) {
+                transformaciónResultante = androideSemiPerfecto;
+                return transformaciónResultante;
+            }else if (porcentaje === 4){
+                transformaciónResultante = androidePerfecto;
+                return transformaciónResultante;
+            }
             return 0;
         } else if (raza === 5){
             porcentaje = getRandomNumber(1,4);
