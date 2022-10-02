@@ -85,7 +85,7 @@ for (i=0; i<numeroParticipantes; i++) {
 console.log(personajesTotal.length);
 
 function definirTransformaciones(personaje){
-    seTransforma = getRandomNumber(1,1);
+    seTransforma = getRandomNumber(0,1);
     let raza = personaje.race[1];
     if (seTransforma === 1){
         if (raza === 1) {
