@@ -87,31 +87,32 @@ for (i=0; i<numeroParticipantes; i++) {
 console.log(personajesTotal.length);
 
 function definirTransformaciones(personaje){
+    let transformaciónResultante;
     seTransforma = getRandomNumber(0,1);
     let raza = personaje.race[1];
     if (seTransforma === 1){
         if (raza === 1) {
             porcentaje = getRandomNumber(1,28);
             if (porcentaje === 1 || porcentaje === 2 || porcentaje === 3 || porcentaje === 4 || porcentaje === 5 || porcentaje === 6 || porcentaje === 7) {
-                transformaciónResultante = ozaruState;
+                transformaciónResultante = superSaiyanGod;
                 return transformaciónResultante;
             }else if (porcentaje === 8 || porcentaje === 9 || porcentaje === 10 || porcentaje === 11 || porcentaje === 12 || porcentaje === 13) {
-                transformaciónResultante = superSaiyan;
+                transformaciónResultante = superSaiyanBlue;
                 return transformaciónResultante
             }else if (porcentaje === 14 || porcentaje === 15 || porcentaje === 16 || porcentaje === 17 || porcentaje === 18) {
-                transformaciónResultante = superSaiyan2;
+                transformaciónResultante = superSaiyan4;
                 return transformaciónResultante
             }else if (porcentaje === 19 || porcentaje === 20 || porentaje === 21 || porcentaje === 22) {
                 transformaciónResultante = superSaiyan3;
                 return transformaciónResultante;
             }else if (porcentaje === 23 || porcentaje === 24 || porcentaje === 25) {
-                transformaciónResultante = superSaiyan4;
+                transformaciónResultante = superSaiyan2;
                 return transformaciónResultante;
             }else if (porcentaje === 26 || porcentaje === 27) {
-                transformaciónResultante = superSaiyanGod;
+                transformaciónResultante = ozaruState;
                 return transformaciónResultante;
             }else if (porcentaje === 28) {
-                transformaciónResultante = superSaiyanBlue;
+                transformaciónResultante = superSaiyan;
                 return transformaciónResultante;
             }else {return 0};
         } else if (raza === 2) {
@@ -208,6 +209,7 @@ for (i=0; i<personajesTotal.length; i++) {
 }
 
 alert(`El ganador del encuentro es ${personajeGanador.name} con un poder de ${bigNumbersChecker(personajeGanador.bPower)}`);
+window.open('index.html', '_self');
 
 function getRandomNumber(min, max) {
     let randomize = Math.random() * (max - min) + min;
