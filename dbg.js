@@ -94,25 +94,25 @@ function definirTransformaciones(personaje){
         if (raza === 1) {
             porcentaje = getRandomNumber(1,28);
             if (porcentaje === 1 || porcentaje === 2 || porcentaje === 3 || porcentaje === 4 || porcentaje === 5 || porcentaje === 6 || porcentaje === 7) {
-                transformaciónResultante = superSaiyanGod;
+                transformaciónResultante = ozaruStates;
                 return transformaciónResultante;
             }else if (porcentaje === 8 || porcentaje === 9 || porcentaje === 10 || porcentaje === 11 || porcentaje === 12 || porcentaje === 13) {
-                transformaciónResultante = superSaiyanBlue;
+                transformaciónResultante = superSaiyan;
                 return transformaciónResultante
             }else if (porcentaje === 14 || porcentaje === 15 || porcentaje === 16 || porcentaje === 17 || porcentaje === 18) {
-                transformaciónResultante = superSaiyan4;
+                transformaciónResultante = superSaiyan2;
                 return transformaciónResultante
             }else if (porcentaje === 19 || porcentaje === 20 || porentaje === 21 || porcentaje === 22) {
                 transformaciónResultante = superSaiyan3;
                 return transformaciónResultante;
             }else if (porcentaje === 23 || porcentaje === 24 || porcentaje === 25) {
-                transformaciónResultante = superSaiyan2;
+                transformaciónResultante = superSaiyan4;
                 return transformaciónResultante;
             }else if (porcentaje === 26 || porcentaje === 27) {
-                transformaciónResultante = ozaruState;
+                transformaciónResultante = uperSaiyanGod;
                 return transformaciónResultante;
             }else if (porcentaje === 28) {
-                transformaciónResultante = superSaiyan;
+                transformaciónResultante = superSaiyanBlue;
                 return transformaciónResultante;
             }else {return 0};
         } else if (raza === 2) {
